@@ -7,13 +7,12 @@ def is_prime(n):
     for i in range(2, int(n**0.5) + 1):
         if n % i == 0: return False
     return True
-a=int(input())
-b=int(input())
-x,y=a,b
-while y:
-    x,y=y,x%y
-nsd=x
-print(nsd)
+def nsd(a,b):
+    a=abs(a)
+    b=abs(b)
+    while b!=0:
+        a,b=b,a%b
+    return a
 def fibonacci(n):
     """Повертає n-те число Фібоначчі"""
     if n <= 0:
